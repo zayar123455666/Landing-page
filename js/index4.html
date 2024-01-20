@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="index2.js"></script>
+</head>
+<body>
+    <input type="button" id="i" value="Cross Event Object">
+   <script>
+    var a=document.getElementById("i");
+    a.onclick=function(event){
+        event=EventUtil.getEvent(event);
+   var t=EventUtil.getTarget(event);
+   alert(t.tagName);
+    }
+    EventUtil.addHandler(a,"mouseover",function(event){
+        event=EventUtil.getEvent(event);
+   var t=EventUtil.getTarget(event);
+   alert(t.tagName);
+    })
+   </script> 
+</body>
+</html>

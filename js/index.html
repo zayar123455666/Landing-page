@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+<body>
+<input type="button" value="Mouse Event" id="myBtn">
+<script>
+  var btn=document.getElementById("myBtn");
+  var handler=function(event){
+  switch(event.type){
+  case "click":alert(event.type);break;
+
+  case "mouseover":event.target.style.backgroundColor="skyblue";
+  event.target.style.fontSize="40px";break;
+
+  case "mouseout":event.target.style.backgroundColor="yellow";
+ event.target.style.fontSize="20px";break;
+
+  }
+  }
+  btn.onclick=handler;
+  btn.onmouseover=handler;
+  btn.onmouseout=handler;
+
+</script>
+</body>
+</html>

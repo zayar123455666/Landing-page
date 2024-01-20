@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="button" id="a" value="Flow Event">
+   <script>
+    var i=document.getElementById("a");
+    i.onclick=function(event){
+        alert(event.type);
+        event.stopPropagation();//other browser
+        //window.event.cancelBubble=true;(IE event objcet)
+    }
+    document.body.onclick=function(event){
+        alert("Body clicked");
+    }
+   </script> 
+</body>
+</html>
